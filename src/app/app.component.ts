@@ -3,8 +3,18 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-test';
+  title = 'curso-profesional-angular';
+  imgCody = 'assets/codys/1.png';
+  ngOnInit(){
+    this.getCodyImg();
+  }
+
+  getCodyImg(){
+    let rand = Math.random() * 17 ;
+    rand = Math.floor(rand);
+    this.imgCody = `assets/codys/${rand}.png`;
+  }
 }
